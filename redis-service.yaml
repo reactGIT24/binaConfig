@@ -49,7 +49,7 @@ app:
     key-splitor: _
     jwtblacklist-prefix: jwtblacklist
     category-prefix: category
-    category-key: cpbzcategory
+    category-key: categories
     jwtblaklist-key: cpjwtblacklist
     env-Id: 100 # development
     # env-Id: 200 uat
