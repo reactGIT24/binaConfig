@@ -1,7 +1,7 @@
 resilience4j:
   circuitbreaker:
     configs:
-      default:
+      default: 
         failureRateThreshold: 50
         slidingWindowSize: 20
         minimumNumberOfCalls: 10
