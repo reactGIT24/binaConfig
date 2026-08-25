@@ -1,20 +1,21 @@
 resilience4j:
   circuitbreaker:
-    default-configs:
-      failureRateThreshold: 50
-      slidingWindowSize: 20
-      minimumNumberOfCalls: 10
-      waitDurationInOpenState: 30s
-      permittedNumberOfCallsInHalfOpenState: 10
-      automaticTransitionFromOpenToHalfOpenEnabled: true
-      # Only list Java exceptions you throw yourself, NOT HTTP client exceptions
-      ignoreExceptions:
-        - java.lang.IllegalArgumentException
-        - java.lang.IllegalStateException
-        - java.lang.NullPointerException
-        # Remove these - they won't work as expected:
-        # - org.springframework.web.client.HttpClientErrorException$BadRequest
-        # - org.springframework.web.reactive.function.client.WebClientResponseException$BadRequest
+    configs:
+      default:
+        failureRateThreshold: 50
+        slidingWindowSize: 20
+        minimumNumberOfCalls: 10
+        waitDurationInOpenState: 30s
+        permittedNumberOfCallsInHalfOpenState: 10
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        # Only list Java exceptions you throw yourself, NOT HTTP client exceptions
+        ignoreExceptions:
+          - java.lang.IllegalArgumentException
+          - java.lang.IllegalStateException
+          - java.lang.NullPointerException
+          # Remove these - they won't work as expected:
+          # - org.springframework.web.client.HttpClientErrorException$BadRequest
+          # - org.springframework.web.reactive.function.client.WebClientResponseException$BadRequest
     instances:
       authentication-service:
         baseConfig: default
