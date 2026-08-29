@@ -1,10 +1,7 @@
 api:
   paths:
     version: /api/v1
-
     #------------------ Authentication ------------------
-    
-
     admin-auth:
       base: ${api.paths.version}/admin/auth
       signup: /signup
@@ -40,12 +37,11 @@ api:
         specifications:
           base: ${api.paths.version}/secure/operation/specifications
 
-     #------------------ Secure Cache Categories & Specifications ------------------
-     cache:
-       categories:
-         base: ${api.paths.version}/secure/cache/categories
-         update: /update
-
+      #------------------ Secure Cache Categories & Specifications ------------------
+      cache:
+        categories:
+          base: ${api.paths.version}/secure/cache/categories
+          update: /update
           
     #******************************************************************************** 
     #******************************** Public paths ********************************** 
