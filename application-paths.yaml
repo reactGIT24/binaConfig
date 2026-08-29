@@ -99,5 +99,5 @@ api:
         base: ${api.paths.version}/public/notification
         confirm-registration: /confirm-registration
         reset-password: /reset-password
-        passwordchanged: /passwordchanged
+        password-changed: /password-changed
         temporary-password: /temporary-password
