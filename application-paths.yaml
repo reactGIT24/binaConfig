@@ -14,13 +14,7 @@ api:
       base: ${api.paths.version}/custom/auth
       find-user: /find-userId
 
-    #------------------ REDIS ------------------
-    blacklist:
-      base: ${api.paths.version}/blacklist
-      add-jwt: /add-jwt
-      find-jwt: /find-jwt
-      delete-all-jwt: /delete-all-jwt
-    
+       
     cache:
       secure:
         base: ${api.paths.version}/cache/secure
@@ -36,22 +30,42 @@ api:
     
 
     #----------------- Operation -----------------
-    admin-operation:
-      base-categories: ${api.paths.version}/admin/operation/categories
-      add-categories: /add-categories
-      add-subcategories: /add-subcategories
-      add-products: /add-products
-      add-brands: /add-brands
-      update-categories: /update-categories
-      update-subcategories: /update-subcategories
-      update-products: /update-products
-      update-brands: /update-products
-    
+        
       base-specifications: ${api.paths.version}/admin/operation/specifications
 
-      
+    #----------------- Secure paths -----------------  
+    secure:
+      base: ${api.paths.version}/secure
 
-    #----------------- Public paths ----------------- 
+      blacklist:
+        base: ${api.paths.version}/secure/blacklist
+        delete-all-jwt: /delete-all-jwt
+      #------------------ Secure Operation Categories & Specifications ------------------
+      operation:
+        categories:
+          base: ${api.paths.version}/secure/operation/categories
+          add-categories: /add-categories
+          add-subcategories: /add-subcategories
+          add-products: /add-products
+          add-brands: /add-brands
+          update-categories: /update-categories
+          update-subcategories: /update-subcategories
+          update-products: /update-products
+          update-brands: /update-products
+
+        specifications:
+          base: ${api.paths.version}/secure/operation/specifications
+
+     #------------------ Secure Cache Categories & Specifications ------------------
+     cache:
+       categories:
+         base: ${api.paths.version}/secure/cache/categories
+         update: /update
+
+          
+    #******************************************************************************** 
+    #******************************** Public paths ********************************** 
+    #********************************************************************************
     public:
       base: ${api.paths.version}/public
 
