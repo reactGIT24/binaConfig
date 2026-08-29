@@ -32,7 +32,7 @@ api:
           update-categories: /update-categories
           update-subcategories: /update-subcategories
           update-products: /update-products
-          update-brands: /update-products
+          update-brands: /update-brands
 
         specifications:
           base: ${api.paths.version}/secure/operation/specifications
@@ -69,9 +69,9 @@ api:
       #------------------ Public Operation Categories ------------------
       operation-categories:
         base: ${api.paths.version}/public/operation/categories
-        add-categories: /find-categories
-        add-subcategories: /find-subcategories
-        add-products: /find-products
+        find-categories: /find-categories
+        find-subcategories: /find-subcategories
+        find-products: /find-products
 
       #------------------ Public Operation Specifications ------------------
       operation-specifications:
