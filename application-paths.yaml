@@ -85,8 +85,8 @@ api:
         find-category: /find
         find-all: /findAll
 
-        cache-specifications:
-          base: ${api.paths.version}/public/cache/specifications
+      cache-specifications:
+        base: ${api.paths.version}/public/cache/specifications
       
       
     #------------------ Notification ------------------
