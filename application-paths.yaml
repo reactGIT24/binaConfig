@@ -14,24 +14,8 @@ api:
       base: ${api.paths.version}/custom/auth
       find-user: /find-userId
 
-       
-    cache:
-      secure:
-        base: ${api.paths.version}/cache/secure
-        categories:
-          update: /categories/update
         
-        specifications:
-          update: /specifications/update
-         
-
-        
-    #----------------- Administration -----------------
-    
-
-    #----------------- Operation -----------------
-        
-      base-specifications: ${api.paths.version}/admin/operation/specifications
+      #base-specifications: ${api.paths.version}/admin/operation/specifications
 
     #----------------- Secure paths -----------------  
     secure:
