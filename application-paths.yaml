@@ -57,6 +57,8 @@ api:
     
       base-specifications: ${api.paths.version}/admin/operation/specifications
 
+      
+
     #----------------- Public paths ----------------- 
     public:
       base: ${api.paths.version}/public
@@ -69,7 +71,17 @@ api:
       add-products: /find-products
 
       specifications: /specifications
-  
+
+
+    public-cache:
+      base: ${api.paths.public.base}/cache
+      categories: /categories
+      find-category: /find
+      find-all: /findAll
+
+      specifications: /specifications
+      
+      
     #------------------ Notification ------------------
     notification:
       base: ${api.paths.version}/notification
