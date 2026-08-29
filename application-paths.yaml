@@ -3,15 +3,7 @@ api:
     version: /api/v1
 
     #------------------ Authentication ------------------
-    auth:
-      base: ${api.paths.version}/auth
-      signup: /signup
-      signin: /signin
-      signout: /signout
-      verify-email: /verify-email
-      forgot-password: /forgot-password
-      reset-password: /reset-password
-      resend-verification: /resend-verification
+    
 
     admin-auth:
       base: ${api.paths.version}/admin/auth
@@ -63,23 +55,38 @@ api:
     public:
       base: ${api.paths.version}/public
             
-    public-operation:
-      base: ${api.paths.public.base}/operation
-      categories: /categories
-      add-categories: /find-categories
-      add-subcategories: /find-subcategories
-      add-products: /find-products
+      auth:
+        base: ${api.paths.version}/public/auth
+        signup: /signup
+        signin: /signin
+        signout: /signout
+        verify-email: /verify-email
+        forgot-password: /forgot-password
+        reset-password: /reset-password
+        resend-verification: /resend-verification
+      
+      blacklist:
+        base: ${api.paths.version}/public/blacklist
+        add-jwt: /add-jwt
+        find-jwt: /find-jwt
+      
+      operation-categories:
+        base: ${api.paths.version}/public/operation/categories
+        add-categories: /find-categories
+        add-subcategories: /find-subcategories
+        add-products: /find-products
 
-      specifications: /specifications
+      operation-specifications:
+      base: ${api.paths.version}/public/operation/specifications
 
 
-    public-cache:
-      base: ${api.paths.public.base}/cache
-      categories: /categories
-      find-category: /find
-      find-all: /findAll
+      cache-categories:
+        base: ${api.paths.version}/public/cache/categories
+        find-category: /find
+        find-all: /findAll
 
-      specifications: /specifications
+        cache-specifications:
+          base: ${api.paths.version}/public/cache/specifications
       
       
     #------------------ Notification ------------------
