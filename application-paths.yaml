@@ -54,7 +54,8 @@ api:
     #----------------- Public paths ----------------- 
     public:
       base: ${api.paths.version}/public
-            
+
+      #------------------ Public Authentication ------------------
       auth:
         base: ${api.paths.version}/public/auth
         signup: /signup
@@ -64,35 +65,39 @@ api:
         forgot-password: /forgot-password
         reset-password: /reset-password
         resend-verification: /resend-verification
-      
+
+      #------------------ Public Blacklist ------------------
       blacklist:
         base: ${api.paths.version}/public/blacklist
         add-jwt: /add-jwt
         find-jwt: /find-jwt
-      
+
+      #------------------ Public Operation Categories ------------------
       operation-categories:
         base: ${api.paths.version}/public/operation/categories
         add-categories: /find-categories
         add-subcategories: /find-subcategories
         add-products: /find-products
 
+      #------------------ Public Operation Specifications ------------------
       operation-specifications:
-      base: ${api.paths.version}/public/operation/specifications
+        base: ${api.paths.version}/public/operation/specifications
 
-
+      #------------------ Public Cache Categories ------------------
       cache-categories:
         base: ${api.paths.version}/public/cache/categories
         find-category: /find
         find-all: /findAll
 
+      #------------------ Public Cache Specifications ------------------
       cache-specifications:
         base: ${api.paths.version}/public/cache/specifications
       
       
-    #------------------ Notification ------------------
-    notification:
-      base: ${api.paths.version}/notification
-      confirm-registration: /confirm-registration
-      reset-password: /reset-password
-      passwordchanged: /passwordchanged
-      temporary-password: /temporary-password
+      #------------------ Public Notifications ------------------
+      notification:
+        base: ${api.paths.version}/public/notification
+        confirm-registration: /confirm-registration
+        reset-password: /reset-password
+        passwordchanged: /passwordchanged
+        temporary-password: /temporary-password
