@@ -114,3 +114,6 @@ app:
 
   messages: #---------- Messages configuration properties -----------------  
     base-url: https://raw.githubusercontent.com/reactGIT24/binaconfig/main/messages/messages
+    refresh-interval: 10m
+    connect-timeout: 5s
+    read-timeout: 10s
