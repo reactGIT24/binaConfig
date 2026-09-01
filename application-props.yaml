@@ -117,3 +117,6 @@ app:
     refresh-interval: 10m
     connect-timeout: 5s
     read-timeout: 10s
+    languages:
+      - en
+      - ar
