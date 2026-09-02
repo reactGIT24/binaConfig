@@ -26,18 +26,24 @@ api:
         categories:
           base: ${api.paths.version}/secure/operation/categories
           add-categories: /add-categories
-          add-subcategories: /add-subcategories
-          add-products: /add-products
-          add-brands: /add-brands
           update-categories: /update-categories
-          update-subcategories: /update-subcategories
-          update-products: /update-products
-          update-brands: /update-brands
           changestatus-categories: /changestatus-categories
-          changestatus-subcategories: /shangestatus-subcategories
-          changestatus-products: /changestatus-products
-          changestatus-brands: /changestatus-brands
+          delete-categories: /delete-categories
           
+          add-subcategories: /add-subcategories
+          update-subcategories: /update-subcategories
+          changestatus-subcategories: /changestatus-subcategories
+          delete-subcategories: /delete-subcategories
+          
+          add-products: /add-products
+          update-products: /update-products
+          changestatus-products: /changestatus-products
+          delete-products: /delete-products
+          
+          add-brands: /add-brands
+          update-brands: /update-brands
+          changestatus-brands: /changestatus-brands
+          delete-brands: /delete-brands          
 
         specifications:
           base: ${api.paths.version}/secure/operation/specifications
