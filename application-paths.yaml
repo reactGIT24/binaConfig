@@ -33,10 +33,10 @@ api:
           update-subcategories: /update-subcategories
           update-products: /update-products
           update-brands: /update-brands
-          changestatus-categories: /update-categories
-          changestatus-subcategories: /update-subcategories
-          changestatus-products: /update-products
-          changestatus-brands: /update-brands
+          changestatus-categories: /changestatus-categories
+          changestatus-subcategories: /shangestatus-subcategories
+          changestatus-products: /changestatus-products
+          changestatus-brands: /changestatus-brands
           
 
         specifications:
